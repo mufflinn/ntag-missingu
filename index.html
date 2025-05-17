@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Just for You 💖</title>
+  <title>Open This Gift 🎁</title>
   <style>
     body {
       margin: 0;
@@ -13,62 +13,66 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: start;
+      justify-content: center;
       min-height: 100vh;
       text-align: center;
-      padding: 30px 20px;
+      padding: 20px;
       box-sizing: border-box;
     }
 
-    h1 {
-      color: #ff4fa3;
-      font-size: 2rem;
-      margin-top: 20px;
-      animation: fadeIn 1s ease-in-out;
+    .gift-box {
+      width: 180px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
-    .tenor-gif-embed {
-      margin-top: 20px;
+    .gift-box:hover {
+      transform: scale(1.05);
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .gif-img {
       width: 100%;
       max-width: 300px;
+      margin-top: 20px;
       border-radius: 20px;
-      overflow: hidden;
-      animation: fadeIn 1.5s ease-in-out;
     }
 
     .message {
-      margin-top: 25px;
+      margin-top: 20px;
       font-size: 1.1rem;
       color: #444;
       background: #fff0f7;
       padding: 15px 20px;
       border-radius: 20px;
       max-width: 360px;
-      animation: fadeIn 2s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(15px); }
-      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
-  <h1>I want you to be more happy 💕</h1>
+  <!-- Gift Box Image -->
+  <img src="https://i.imgur.com/IXwX3Xz.png" alt="Gift Box" class="gift-box" onclick="revealGift()" />
 
-  <!-- Tenor Bubu Gif -->
-  <div class="tenor-gif-embed" data-postid="5315286381603635314" data-share-method="host" data-aspect-ratio="1" data-width="100%">
-    <a href="https://tenor.com/view/bubu-gif-5315286381603635314">Bubu Sticker</a> from 
-    <a href="https://tenor.com/search/bubu-stickers">Bubu Stickers</a>
+  <!-- Hidden Content (GIF + Message) -->
+  <div id="gift-content" class="hidden">
+    <img src="https://media.tenor.com/kR-jrEr5M8cAAAAM/bubu-dudu.gif" alt="Cute Bubu Gif" class="gif-img">
+    <div class="message">
+      I want you to be more happy — because seeing you smile makes me smile too 💖<br><br>
+      You deserve joy every single day 🌸✨
+    </div>
   </div>
-  <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
 
-  <!-- Sweet Message -->
-  <div class="message">
-    I want you to smile more — because when you're happy, I'm happy too. 🥺💕<br><br>
-    Seeing you light up makes my day a whole lot brighter. Keep shining, okay? 🌸✨
-  </div>
+  <script>
+    function revealGift() {
+      document.querySelector('.gift-box').classList.add('hidden');
+      document.getElementById('gift-content').classList.remove('hidden');
+    }
+  </script>
 
 </body>
 </html>
