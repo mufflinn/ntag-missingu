@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For You 🌸</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(to bottom right, #ffe6f0, #fcdfff);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Comic Sans MS', cursive;
+    }
+
+    h1 {
+      color: #ff66a3;
+      text-align: center;
+      font-size: 2em;
+      margin-top: 1em;
+      text-shadow: 1px 1px 2px #fff;
+    }
+
+    .gift {
+      width: 150px;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    .flower {
+      position: absolute;
+      width: 30px;
+      animation: floatUp 8s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes floatUp {
+      0% {
+        bottom: 0;
+        transform: translateX(0);
+      }
+      100% {
+        bottom: 100%;
+        transform: translateX(100px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <img src="https://i.ibb.co/tPBqxLx/gift.png" alt="Gift" class="gift" />
+  <h1>I want you to be more happy since 💖</h1>
+
+  <audio autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Floating Flowers -->
+  <script>
+    for (let i = 0; i < 10; i++) {
+      let flower = document.createElement('img');
+      flower.src = 'https://i.ibb.co/y6rkPNp/flower.png'; // or any cute flower
+      flower.className = 'flower';
+      flower.style.left = Math.random() * 100 + 'vw';
+      flower.style.animationDelay = (Math.random() * 5) + 's';
+      document.body.appendChild(flower);
+    }
+  </script>
+
+</body>
+</html>
+📁 What You Need to
