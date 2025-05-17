@@ -2,77 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Open This Gift 🎁</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #ffe0f0, #ffeefc);
-      font-family: 'Comic Sans MS', 'Arial Rounded MT Bold', cursive;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-      text-align: center;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .gift-box {
-      width: 180px;
-      height: auto;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-    }
-
-    .gift-box:hover {
-      transform: scale(1.05);
-    }
-
-    .hidden {
-      display: none;
-    }
-
-    .gif-img {
-      width: 100%;
-      max-width: 300px;
-      margin-top: 20px;
-      border-radius: 20px;
-    }
-
-    .message {
-      margin-top: 20px;
-      font-size: 1.1rem;
-      color: #444;
-      background: #fff0f7;
-      padding: 15px 20px;
-      border-radius: 20px;
-      max-width: 360px;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>You Make Me Happy 🎁</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Gift Box Image -->
+  <!-- Floating Flowers -->
+  <div class="flowers"></div>
+
+  <!-- Gift Box -->
   <img src="https://i.imgur.com/IXwX3Xz.png" alt="Gift Box" class="gift-box" onclick="revealGift()" />
 
-  <!-- Hidden Content (GIF + Message) -->
+  <!-- Hidden Content -->
   <div id="gift-content" class="hidden">
-    <img src="https://media.tenor.com/kR-jrEr5M8cAAAAM/bubu-dudu.gif" alt="Bubu Gif" class="gif-img">
+    <img src="https://media.tenor.com/JyW9-BB_0uIAAAAC/bubu-cute.gif" alt="Bubu Gif" class="gif-img" />
     <div class="message">
-      I want you to be more happy — because seeing you smile makes me smile too 💖<br><br>
-      You deserve joy every single day 🌸✨
+      I want you to be more happy 💖<br />
+      Because seeing you smile makes me smile too ☺️<br />
+      You deserve all the love and joy in the world 🌸
     </div>
   </div>
 
-  <script>
-    function revealGift() {
-      document.querySelector('.gift-box').classList.add('hidden');
-      document.getElementById('gift-content').classList.remove('hidden');
-    }
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
