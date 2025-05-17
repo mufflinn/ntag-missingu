@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ffe5ec, #ffeefc);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow: hidden;
+}
+
+.gift-box {
+  width: 200px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  animation: float 2s ease-in-out infinite;
+}
+
+.gift-box:hover {
+  transform: scale(1.1);
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.gif-img {
+  width: 90%;
+  max-width: 320px;
+  border-radius: 20px;
+  margin-top: 20px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+  background: #fff0f7;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  max-width: 350px;
+  color: #5b2c6f;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.flowers {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+
+.flower {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url('https://i.imgur.com/I6XTrE2.png');
+  background-size: cover;
+  animation: fall 6s linear infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(-50px) rotate(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
